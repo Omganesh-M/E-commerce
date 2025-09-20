@@ -1,0 +1,321 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="https://use.typekit.net/cmq8cau.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.0/css/all.min.css"
+      integrity="sha512-DxV+EoADOkOygM4IR9yXP8Sb2qwgidEmeqAEmDKIOfPRQZOWbXCzLC6vjbZyy0vPisbH2SyW27+ddLVCN+OMzQ=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+
+    <title>Shopspot</title>
+
+    <link rel="icon" type="image/png" href="favicon.png" />
+    <link rel="preload" as="image" href="remove background.png" />
+    <link rel="preload" as="image" href="shopping.png" />
+    <link rel="preload" as="image" href="Home-Appliance-PNG-Image.png" />
+    <link rel="preload" as="image" href="gadget.png" />
+
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <!-- Navigation -->
+    <nav class="navbar">
+  <h1 style="font-family: 'Times New Roman', Times, serif">Shopspot</h1>
+
+  <div class="navlinks">
+    <p><a href="index.html">Home</a></p>
+    <p><a href="Collections.html">Collections</a></p>
+    <p><a href="Extras.html">About Us</a></p>
+    <p><a href="Contact.html">Contact Us</a></p>
+    <p><a href="Cart.html"><i class="fa-solid fa-cart-shopping"></i></a></p>
+  </div>
+  <p class="threedot"><i class="fa-solid fa-bars"></i></p>
+</nav>
+
+<div class="aside">
+  <span class="closeBtn">&times;</span>
+  <h2>Menu</h2>
+  <p><a href="index.html">Home</a></p>
+  <p><a href="Collections.html">Collections</a></p>
+  <p><a href="Extras.html">About Us</a></p>
+  <p><a href="Contact.html">Contact Us</a></p>
+  <p><a href="Cart.html"><i class="fa-solid fa-cart-shopping"></i> Cart</a></p>
+</div>
+
+    <!-- <div class="aside">
+       <h2>Welcome to Shopspot</h2>
+      <p>Your one-stop shop for fashion, lifestyle, and tech essentials.</p> 
+    </div> -->
+
+    
+    <!-- Image Slider -->
+    <div class="slider">
+      <div class="slides" id="slides">
+        <div
+  class="slide"
+  style="background: linear-gradient(90deg, #2193b0 0%, #6dd5ed 100%)">
+  <div class="caption">
+    <h2>Style That Commands</h2>
+<p>Discover looks built for confidence and comfort.</p>
+
+    <a href="Collections.html" class="shop">Shop Now</a>
+  </div>
+  <img
+    id="home-image"
+    src="remove background.png"
+    alt="image #1"/>
+</div>
+        <div
+          class="slide"
+          style="background: linear-gradient(90deg, #434343 0%, #bdbdbd 100%)"
+        >
+        <div class="caption">
+    <h2>Power Meets Precision</h2>
+<p>Upgrade your home with reliable performance.</p>
+
+
+    <a href="Collections.html" class="shop">Shop Now</a>
+  </div>
+          <img src="appliance.png" alt="image #2" />
+        </div>
+        <div
+          class="slide"
+          style="background: linear-gradient(90deg, #ff5858 0%, #f09819 100%)"
+        >
+        <div class="caption">
+    <h2>Elegance, Redefined</h2>
+    <p>Step into style with our latest fashion picks.</p>
+    <a href="Collections.html" class="shop">Shop Now</a>
+  </div>
+          <img src="shoppingwoman.png" alt="image #3" id="shoppingwoman-image"/>
+        </div>
+        <div
+          class="slide"
+          style="background: linear-gradient(90deg, #f9d423 0%, #fffc00 100%)"
+        >
+        <div class="caption">
+    <h2>Innovate Your Everyday</h2>
+<p>Explore smart tech that fits your lifestyle.</p>
+<!-- style="width: 600px; height: 515px;" -->
+          <!-- style="
+                      height: 400px;
+                      position: relative;
+                      bottom: 20px;
+                      margin-right: 40px;
+                    "
+                    -->
+
+    <a href="Collections.html" class="shop">Shop Now</a>
+  </div>
+          <img
+            src="gadget.png"
+            alt="image #4"
+            id="gadget-image"
+          />
+        </div>
+      </div>
+
+      <div class="buttons">
+        <button class="button1" id="prevBtn">
+          <i class="fa fa-chevron-left"></i>
+        </button>
+        <button class="button2" id="nextBtn">
+          <i class="fa fa-chevron-right"></i>
+        </button>
+      </div>
+    </div>
+
+    <!-- Collections  -->
+
+    <div class="collections">
+      <div class="container1">
+        <img
+          src="modelingwoman1.png"
+          alt="image"
+          style="
+            width: 320px;
+            height: 400px;
+            position: relative;
+            left: 50px;
+            bottom: 20px;
+          "
+        />
+        <h3 style="color: whitesmoke; position: relative; bottom: 40px">
+          This is the hub of dresses for elegent & exquisite woman
+        </h3>
+        <a href="Collections.html"><button class="explore-button" style="position: relative; bottom: 40px">
+          Explore more
+        </button></a>
+      </div>
+      <div class="container2">
+        <img
+          src="appliance1.png"
+          alt="image1"
+          style="width: 400px; height: 300px"
+        />
+        <div class="text-box">
+          <h2 style="color: black; position: relative; left: 20px">
+            Powering comfort & style <br />in every corner of your room
+          </h2>
+          <a href="Collections.html"><button class="explore-button1"> Explore more</button></a>
+        </div>
+      </div>
+      <div class="container3">
+        <img
+          src="gadget1.png"
+          alt="image2"
+          style="width: 379px; height: 300px; position: relative; left: 20px"
+        />
+        <h3 style="color: black; position: relative; bottom: 30px">
+          Smart gadgets for smarter living bringing tech closer to you
+        </h3>
+        <a href="Collections.html"><button class="explore-button2"> Explore more</button></a>
+      </div>
+      <div class="container4">
+        <img
+          src="modelingman1.jpg"
+          alt="image3"
+          style="width: 400px; height: 550px"
+        />
+        <div class="text-box1">
+          <h1 style="color: white">
+            This is the hub where confidence meets fashion crafted for every man
+          </h1>
+          <a href="Collections.html"><button class="explore-button3"> Explore more</button></a>
+        </div>
+      </div>
+    </div>
+
+    <!-- service-benefits -->
+    <div class="service-benefits">
+      <h3>
+        We offer a seamless shopping experience designed around your convenience
+        and peace of mind. Every order comes with free shipping, so you can shop
+        without worrying about extra costs. Our 24/7 customer support is always
+        available to help you with any questions or concerns. With secure
+        payment options, your transactions are protected every step of the way.
+        And if something doesn't work out, our refund policy ensures easy
+        returns with no hassle.
+      </h3>
+      <div class="benefit-item">
+        <i class="fas fa-truck fa-2x"></i>
+        <h3>Free Shipping</h3>
+      </div>
+      <div class="benefit-item">
+        <i class="fas fa-headset fa-2x"></i>
+        <h3>24/7 Customer Support</h3>
+      </div>
+      <div class="benefit-item">
+        <i class="fas fa-shield-alt fa-2x"></i>
+        <h3>Secure Payment</h3>
+      </div>
+      <div class="benefit-item">
+        <i class="fas fa-calendar-check fa-2x"></i>
+        <h3>Refund Policy</h3>
+      </div>
+    </div>
+
+    <!-- community section -->
+    <div class="community">
+  <h1>Join our community and stay connected!</h1>
+  <p>Follow us on social media for the latest updates, promotions, and more.</p>
+  <form action="#" class="join">
+    <div class="input-group">
+      <div class="email-container">
+        <input
+          class="email-input"
+          type="email"
+          placeholder="Enter your email"
+        />
+      </div>
+      <button class="submit-button"><i class="fas fa-paper-plane" ></i></button>
+    </div>
+  </form>
+  
+</div>
+
+    <!-- footer -->
+    <footer class="footer-content">
+      <div class="footer-left">
+        <h2>Shopspot</h2>
+        <p>
+          Your one-stop shop for trendy fashion, accessories and lifestyle
+          products, delivered right to your doorstep.
+        </p>
+
+        <h3>Download App</h3>
+        <div class="app-buttons">
+          <div class="apple">
+            <a href="#"
+              ><i class="fab fa-apple fa-3x" style="color: black"></i
+            ></a>
+            <div class="text">
+              <p>Get it on</p>
+              <h4>Apple store</h4>
+            </div>
+          </div>
+          <div class="google">
+            <a href="#"
+              ><i
+                class="fab fa-google-play"
+                style="color: black; font-size: 45px"
+              ></i
+            ></a>
+            <div class="text">
+              <p>Get it on</p>
+              <h4>Play store</h4>
+            </div>
+          </div>
+        </div>
+
+        <div class="social-icons">
+          <a href="#"><i class="fab fa-instagram fa-2x"></i></a>
+          <a href="#"><i class="fab fa-facebook fa-2x"></i></a>
+          <a href="#"><i class="fab fa-linkedin fa-2x"></i></a>
+          <a href="#"><i class="fab fa-vk fa-2x"></i></a>
+          <a href="#"><i class="fab fa-x-twitter fa-2x"></i></a>
+          <a href="#"><i class="fab fa-youtube fa-2x"></i></a>
+        </div>
+      </div>
+
+      <div class="footer-links">
+        <div>
+          <h4>Company</h4>
+          <ul>
+            <li><a href="Extras.html#AboutUs">About Us</a></li>
+            <li><a href="Extras.html#Policy">Policy</a></li>
+            <li><a href="Extras.html#Terms">Terms and Conditions</a></li>
+            <li><a href="Contact.html">Contact Us</a></li>
+          </ul>
+        </div>
+
+        <div>
+          <h4>Product Categories</h4>
+          <ul>
+            <li><a href="Collections.html#Men">Men's Collection</a></li>
+            <li><a href="Collections.html#Women">Women's Collection</a></li>
+            <li><a href="Collections.html#Appliance">Appliances</a></li>
+            <li><a href="Collections.html#Gadgets">Gadgets</a></li>
+          </ul>
+        </div>
+
+        <div>
+          <h4>Contact Us</h4>
+          <p>M.C Road, Washermenpet, Chennai, Tamilnadu</p>
+          <p>+91 9876543210</p>
+          <p><a href="mailto:example@email.com">example@email.com</a></p>
+        </div>
+      </div>
+    </footer>
+    <footer class="copyright-footer">
+      <p>© Shopspot. All Rights Reserved.</p>
+    </footer>
+
+    <script src="script.js"></script>
+  </body>
+</html>

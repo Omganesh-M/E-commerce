@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="https://use.typekit.net/cmq8cau.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.0/css/all.min.css"
+      integrity="sha512-DxV+EoADOkOygM4IR9yXP8Sb2qwgidEmeqAEmDKIOfPRQZOWbXCzLC6vjbZyy0vPisbH2SyW27+ddLVCN+OMzQ=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <title>Shopspot</title>
+    <link rel="icon" type="image/png" href="favicon.png" />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <nav class="navbar">
+      <h1 style="font-family: 'Times New Roman', Times, serif">Shopspot</h1>
+      <div class="navlinks">
+        <p><a href="index.html">Home</a></p>
+        <p><a href="Collections.html">Collections</a></p>
+        <p><a href="Extras.html">About Us</a></p>
+        <p><a href="Contact.html">Contact Us</a></p>
+        <p>
+          <a href="Cart.html"><i class="fa-solid fa-cart-shopping"></i></a>
+        </p>
+      </div>
+      <p class="threedot"><i class="fa-solid fa-bars"></i></p>
+    </nav>
+
+    <div class="aside">
+      <span class="closeBtn">&times;</span>
+      <h2>Menu</h2>
+      <p><a href="index.html">Home</a></p>
+      <p><a href="Collections.html">Collections</a></p>
+      <p><a href="Extras.html">About Us</a></p>
+      <p><a href="Contact.html">Contact Us</a></p>
+      <p>
+        <a href="Cart.html"><i class="fa-solid fa-cart-shopping"></i> Cart</a>
+      </p>
+    </div>
+
+    <div class="cart-container">
+      <div class="cart-title">Your Cart</div>
+      <table class="cart-table" id="cartTable">
+        <thead>
+          <tr>
+            <th>Product</th>
+            <th>Name</th>
+            <th>Price</th>
+            <th>Qty</th>
+            <th>Subtotal</th>
+            <th>Remove</th>
+          </tr>
+        </thead>
+        <tbody id="cartBody"></tbody>
+      </table>
+      <div class="empty-cart" id="emptyCartMsg" style="display: none">
+        Your cart is empty.
+      </div>
+      <div class="cart-total" id="cartTotal">Total: ₹0</div>
+      <button class="checkout-btn" onclick="location.href='checkout.html'">
+        Checkout
+      </button>
+    </div>
+
+    <footer class="footer-content">
+      <div class="footer-left">
+        <h2>Shopspot</h2>
+        <p>
+          Your one-stop shop for trendy fashion, accessories and lifestyle
+          products, delivered right to your doorstep.
+        </p>
+        <h3>Download App</h3>
+        <div class="app-buttons">
+          <div class="apple">
+            <a href="#"><i class="fab fa-apple fa-3x" style="color: black"></i></a>
+            <div class="text">
+              <p>Get it on</p>
+              <h4>Apple store</h4>
+            </div>
+          </div>
+          <div class="google">
+            <a href="#"><i class="fab fa-google-play" style="color: black; font-size: 45px"></i></a>
+            <div class="text">
+              <p>Get it on</p>
+              <h4>Play store</h4>
+            </div>
+          </div>
+        </div>
+        <div class="social-icons">
+          <a href="#"><i class="fab fa-instagram fa-2x"></i></a>
+          <a href="#"><i class="fab fa-facebook fa-2x"></i></a>
+          <a href="#"><i class="fab fa-linkedin fa-2x"></i></a>
+          <a href="#"><i class="fab fa-vk fa-2x"></i></a>
+          <a href="#"><i class="fab fa-x-twitter fa-2x"></i></a>
+          <a href="#"><i class="fab fa-youtube fa-2x"></i></a>
+        </div>
+      </div>
+
+      <div class="footer-links">
+        <div>
+          <h4>Company</h4>
+          <ul>
+            <li><a href="Extras.html#AboutUs">About Us</a></li>
+            <li><a href="Extras.html#Policy">Policy</a></li>
+            <li><a href="Extras.html#Terms">Terms and Conditions</a></li>
+            <li><a href="Contact.html">Contact Us</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4>Product Categories</h4>
+          <ul>
+            <li><a href="Collections.html#Men">Men's Collection</a></li>
+            <li><a href="Collections.html#Women">Women's Collection</a></li>
+            <li><a href="Collections.html#Appliance">Appliances</a></li>
+            <li><a href="Collections.html#Gadgets">Gadgets</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4>Contact Us</h4>
+          <p>M.C Road, Washermenpet, Chennai, Tamilnadu</p>
+          <p>+91 9876543210</p>
+          <p><a href="mailto:example@email.com">example@email.com</a></p>
+        </div>
+      </div>
+    </footer>
+    <footer class="copyright-footer">
+      <p>© Shopspot. All Rights Reserved.</p>
+    </footer>
+
+    <script src="script.js"></script>
+    <script>
+      let cart = JSON.parse(localStorage.getItem("cart") || "[]");
+
+      function saveCart() {
+        localStorage.setItem("cart", JSON.stringify(cart));
+      }
+
+      function renderCart() {
+        const cartBody = document.getElementById("cartBody");
+        const cartTotal = document.getElementById("cartTotal");
+        const emptyMsg = document.getElementById("emptyCartMsg");
+        const checkoutBtn = document.querySelector(".checkout-btn");
+        cartBody.innerHTML = "";
+        let total = 0;
+
+        if (cart.length === 0) {
+          emptyMsg.style.display = "";
+          cartTotal.textContent = "Total: ₹0";
+          if (checkoutBtn) checkoutBtn.style.display = "none";
+          return;
+        } else {
+          emptyMsg.style.display = "none";
+          if (checkoutBtn) checkoutBtn.style.display = "";
+        }
+
+        cart.forEach((item, idx) => {
+          const subtotal = item.price * item.qty;
+          total += subtotal;
+          const tr = document.createElement("tr");
+          tr.innerHTML = `
+            <td data-label="Product"><img src="${item.img}" alt="${item.name}"></td>
+            <td data-label="Name">${item.name}</td>
+            <td data-label="Price">₹${item.price}</td>
+            <td data-label="Qty">
+              <input type="number" min="1" value="${item.qty}" class="qty-input" data-idx="${idx}">
+            </td>
+            <td data-label="Subtotal">₹${subtotal}</td>
+            <td data-label="Remove">
+              <button class="remove-btn" data-idx="${idx}">Remove</button>
+            </td>
+          `;
+          cartBody.appendChild(tr);
+        });
+
+        cartTotal.textContent = "Total: ₹" + total;
+      }
+
+      document.addEventListener("input", function (e) {
+        if (e.target.classList.contains("qty-input")) {
+          const idx = e.target.getAttribute("data-idx");
+          let val = parseInt(e.target.value);
+          if (isNaN(val) || val < 1) val = 1;
+          cart[idx].qty = val;
+          saveCart();
+          renderCart();
+        }
+      });
+
+      document.addEventListener("click", function (e) {
+        if (e.target.classList.contains("remove-btn")) {
+          const idx = e.target.getAttribute("data-idx");
+          cart.splice(idx, 1);
+          saveCart();
+          renderCart();
+        }
+      });
+
+      renderCart();
+    </script>
+  </body>
+</html>
