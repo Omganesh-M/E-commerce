@@ -263,6 +263,7 @@ body {
   transform: scale(1.2);
 }
 
+
 @media (max-width: 800px) {
   .slider {
     display: flex;
@@ -320,6 +321,76 @@ body {
   padding: 7px;
 }
 }
+
+
+@media (max-width: 450px) {
+  .slider {
+    display: flex;
+    flex: 1 1 50%;
+    transition: flex 3s;
+    height: auto;
+    transition: all 0.3s ease-in-out;
+  }
+
+#home-image{
+    position: relative;
+    top: 70px;
+  }
+
+  #gadget-image{
+    height: 250px;
+    width: 200px;
+  }
+
+  #shoppingwoman-image {
+    /* height: 300px;
+    width: 300px; */
+    position: relative;
+    top: 68px;
+  }
+  .slide img {
+    width: 60%;
+    height: auto;
+    display: block;
+    margin-left: 50%;
+    max-width: 100%;
+    object-fit: contain;
+    transition: all 0.3s ease-in-out;
+  }
+
+  
+  
+
+.slide .caption h2{
+    font-size: 30px;
+  } 
+
+
+.slide .caption p {
+  font-size: 15px;
+  margin-bottom: 18px;
+  color: #f5f5f5;
+}
+
+
+
+.slide .caption .shop {
+  display: inline-block;
+  background: #fff;
+  color: black;
+  font-size: 10px;
+  border-radius: 6px;
+  font-weight: bold;
+  text-decoration: none;
+  transition: background 0.2s, color 0.2s;
+}
+
+.button1, .button2{
+  font-size: 15px;
+  padding: 7px;
+}
+}
+
 
 .collections {
   display: flex;
@@ -608,12 +679,52 @@ body {
   color: white;
 }
 
+@media (max-width:450px) {
+
+.community {
+  margin-top: 200px;
+  background-color: #fff5ee;
+  color: black;
+  padding: 50px;
+  border-radius: 10px;
+  text-align: center;
+  height: 450px;
+}
+
+
+.email-container {
+  position: relative; 
+  display: flex;
+  flex-direction: column;
+}
+
+.email-input {
+  padding: 10px;
+  width: 200px;
+  padding: 2px;
+}
+
+.submit-button {
+  position: relative;
+  width: 50px;
+  padding: 5px;
+  cursor: pointer;
+  background-color: #000000;
+  color: white;
+  font-weight: bold;
+  border: none;
+  border-radius: 5px;
+}
+
 .error-message {
-  font-size: 14px;
+  position: absolute;
+  top: 100%;   
+  left: 0;
+  font-size: 11px;
   color: red;
-  margin-top: 5px;
-  height: 18px;
-  margin-right: 50px;
+  margin-top: 2px;
+}
+
 }
 
 .footer-content {
