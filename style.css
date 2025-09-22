@@ -323,7 +323,7 @@ body {
 }
 
 
-@media (max-width: 450px) {
+@media (max-width: 400px) {
   .slider {
     display: flex;
     flex: 1 1 50%;
@@ -331,6 +331,7 @@ body {
     height: auto;
     transition: all 0.3s ease-in-out;
   }
+
 
 #home-image{
     position: relative;
@@ -389,7 +390,7 @@ body {
   font-size: 15px;
   padding: 7px;
 }
-}
+} 
 
 
 .collections {
@@ -456,6 +457,15 @@ body {
   margin: 12px;
 }
 
+.container1 img{
+  width: 320px;
+            height: 400px;
+            position: relative;
+            left: 50px;
+            bottom: 20px;
+          
+}
+
 .container2 {
   flex: 1 1 65%;
   display: flex;
@@ -464,6 +474,10 @@ body {
   height: 370px;
   order: 2;
   margin: 10px;
+}
+
+.container2 img{
+  width: 400px; height: 300px;
 }
 
 .text-box {
@@ -479,6 +493,10 @@ body {
   order: 3;
 }
 
+.container3 img{
+  width: 379px; height: 300px; position: relative; left: 20px;
+}
+
 .container4 {
   flex: 1 1 65%;
   height: 600px;
@@ -486,6 +504,10 @@ body {
   display: flex;
   justify-content: space-between;
   gap: 15px;
+}
+
+.container4 img{
+  width: 400px; height: 550px;
 }
 
 @media (max-width: 900px) {
