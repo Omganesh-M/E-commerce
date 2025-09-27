@@ -49,6 +49,7 @@
           <tr>
             <th>Product</th>
             <th>Name</th>
+            <th>Size</th>
             <th>Price</th>
             <th>Qty</th>
             <th>Subtotal</th>
@@ -76,14 +77,21 @@
         <h3>Download App</h3>
         <div class="app-buttons">
           <div class="apple">
-            <a href="#"><i class="fab fa-apple fa-3x" style="color: black"></i></a>
+            <a href="#"
+              ><i class="fab fa-apple fa-3x" style="color: black"></i
+            ></a>
             <div class="text">
               <p>Get it on</p>
               <h4>Apple store</h4>
             </div>
           </div>
           <div class="google">
-            <a href="#"><i class="fab fa-google-play" style="color: black; font-size: 45px"></i></a>
+            <a href="#"
+              ><i
+                class="fab fa-google-play"
+                style="color: black; font-size: 45px"
+              ></i
+            ></a>
             <div class="text">
               <p>Get it on</p>
               <h4>Play store</h4>
@@ -132,6 +140,7 @@
     </footer>
 
     <script src="script.js"></script>
+    <script src="search.js"></script>
     <script>
       let cart = JSON.parse(localStorage.getItem("cart") || "[]");
 
@@ -162,17 +171,21 @@
           total += subtotal;
           const tr = document.createElement("tr");
           tr.innerHTML = `
-            <td data-label="Product"><img src="${item.img}" alt="${item.name}"></td>
-            <td data-label="Name">${item.name}</td>
-            <td data-label="Price">₹${item.price}</td>
-            <td data-label="Qty">
-              <input type="number" min="1" value="${item.qty}" class="qty-input" data-idx="${idx}">
-            </td>
-            <td data-label="Subtotal">₹${subtotal}</td>
-            <td data-label="Remove">
-              <button class="remove-btn" data-idx="${idx}">Remove</button>
-            </td>
+          <td data-label="Product"><img src="${item.img}" alt="${item.name}"></td>
+          <td data-label="Name">${item.name}</td>
+          <td data-label="Size">${item.size || "-"}</td>
+          <td data-label="Price">₹${item.price}</td>
+          <td data-label="Qty">
+          <input type="number" min="1" value="${
+          item.qty
+          }" class="qty-input" data-idx="${idx}">
+          </td>
+          <td data-label="Subtotal">₹${subtotal}</td>
+          <td data-label="Remove">
+          <button class="remove-btn" data-idx="${idx}">Remove</button>
+          </td>
           `;
+
           cartBody.appendChild(tr);
         });
 

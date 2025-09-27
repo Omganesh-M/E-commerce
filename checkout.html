@@ -258,18 +258,21 @@
           total += subtotal;
           const tr = document.createElement("tr");
           tr.innerHTML = `
-            <td data-label="Product"><img src="${item.img}" alt="${item.name}"></td>
-            <td data-label="Name">${item.name}</td>
-            <td data-label="Price">₹${item.price}</td>
-            <td data-label="Qty">
-              <input type="number" min="1" value="${item.qty}" class="qty-input" data-idx="${idx}">
-            </td>
-            <td data-label="Subtotal">₹${subtotal}</td>
-            <td data-label="Remove">
-              <button class="remove-btn" data-idx="${idx}">Remove</button>
-            </td>
+          <td data-label="Product"><img src="${item.img}" alt="${item.name}"></td>
+          <td data-label="Name">${item.name}</td>
+          <td data-label="Size">${item.size || "-"}</td>
+          <td data-label="Price">₹${item.price}</td>
+          <td data-label="Qty">
+          <input type="number" min="1" value="${
+          item.qty
+          }" class="qty-input" data-idx="${idx}">
+          </td>
+          <td data-label="Subtotal">₹${subtotal}</td>
+          <td data-label="Remove">
+          <button class="remove-btn" data-idx="${idx}">Remove</button>
+          </td>
           `;
-          cartBody.appendChild(tr);
+        cartBody.appendChild(tr);
         });
         cartTotal.textContent = "Total: ₹" + total;
       }

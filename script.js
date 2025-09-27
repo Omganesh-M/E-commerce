@@ -57,12 +57,12 @@ document.addEventListener("DOMContentLoaded", () => {
 
     if (emailInput.value === "") {
       let error = document.createElement("p");
-      error.textContent = "Please enter your email address.";
+      error.textContent = "Please enter your email.";
       error.classList.add("error-message");
       emailContainer.appendChild(error);
     } else if (!emailpattern.test(emailInput.value)) {
       let error = document.createElement("p");
-      error.textContent = "Please enter a valid email address.";
+      error.textContent = "Please enter a valid email.";
       error.classList.add("error-message");
       emailContainer.appendChild(error);
     } else {
@@ -90,4 +90,5 @@ contactForm.addEventListener("submit", (event) => {
 
   contactForm.innerHTML =
     "<p>Thank you for contacting us. We will get back to you soon!</p>";
+
 });

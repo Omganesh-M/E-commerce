@@ -280,14 +280,14 @@ body {
 
   #gadget-image{
     height: 250px;
-    width: 250px;
+    width: 220px;
   }
 
   #shoppingwoman-image {
     /* height: 300px;
     width: 300px; */
     position: relative;
-    top: 40px;
+    top: 45px;
   }
   .slide img {
     width: 60%;
@@ -323,7 +323,7 @@ body {
 }
 
 
-@media (max-width: 400px) {
+@media (max-width: 450px) {
   .slider {
     display: flex;
     flex: 1 1 50%;
@@ -344,10 +344,9 @@ body {
   }
 
   #shoppingwoman-image {
-    /* height: 300px;
-    width: 300px; */
+
     position: relative;
-    top: 68px;
+    top: 75px;
   }
   .slide img {
     width: 60%;
@@ -510,7 +509,7 @@ body {
   width: 400px; height: 550px;
 }
 
-@media (max-width: 900px) {
+@media (max-width: 800px) {
   .container1,
   .container2,
   .container3,
@@ -682,8 +681,16 @@ body {
 
 .email-input {
   padding: 10px;
-  width: 300px;
+  width:300px;
 }
+
+.error-message {
+  font-size: 15px;
+  color: red;
+  margin-top: 10px;
+  margin-right: 29px;
+}
+
 
 .submit-button {
   width: 50px;
@@ -697,11 +704,13 @@ body {
 }
 
 .submit-button:hover {
-  background: rgb(223, 78, 78);
+  background:#434343;
   color: white;
 }
 
-@media (max-width:450px) {
+
+
+@media (max-width:800px) {
 
 .community {
   margin-top: 200px;
@@ -710,7 +719,7 @@ body {
   padding: 50px;
   border-radius: 10px;
   text-align: center;
-  height: 450px;
+  height: 400px;
 }
 
 
@@ -740,11 +749,12 @@ body {
 
 .error-message {
   position: absolute;
-  top: 100%;   
-  left: 0;
-  font-size: 11px;
+  top: 50%;   
+  left: 5px;
+  font-size: 12px;
+  font-weight: bolder;
   color: red;
-  margin-top: 2px;
+  
 }
 
 }
@@ -971,7 +981,7 @@ body {
   justify-content: flex-end;
   align-items: center;
   width: 260px;
-  height: 400px;
+  height: 450px;
   margin: 10px;
   padding: 20px;
   border: 1px solid black;
@@ -987,16 +997,39 @@ body {
   background: black;
   color: white;
   border: none;
-  border-radius: 5px;
+   border-radius: 5px;
   cursor: pointer;
-  width: 220px;
-  height: 40px;
-  font-weight: bold;
+  margin-top: 20px;
+  width: 200px;
+  height: 35px;
+  font-weight: bold; 
+
 }
+
 
 .add-to-cart:hover {
   background: #616161;
   color: whitesmoke;
+}
+
+.size-select {
+  font-size: 13px;   
+  font-weight:500;     
+  padding: 3px 6px;       
+  margin: 6px 0;          
+  width: 200px;           
+  display: block;         
+  border: 1.5px solid #000000;
+}
+
+.size-select:focus {
+  border-color: #616161;
+  outline: none;
+}
+
+.cart-table th:nth-child(3),
+.cart-table td:nth-child(3) {
+  text-align: center;
 }
 
 .dress {

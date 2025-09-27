@@ -61,6 +61,7 @@ search.addEventListener("keyup", () => {
 });
 
 
+
 document.querySelectorAll('.add-to-cart').forEach(btn => {
   btn.addEventListener('click', () => {
     let box = btn.closest('.box');
@@ -73,15 +74,32 @@ document.querySelectorAll('.add-to-cart').forEach(btn => {
     let name = parts[0].trim();
     let price = parseInt(parts[1].replace(/[^\d]/g, ''), 10);
 
+    
+    let sizeSelect = box.querySelector('.size-select');
+    let size = "";
+    if (sizeSelect) {
+      size = sizeSelect.value;
+      if (size === "") {
+        btn.textContent = "Select Size";
+        btn.style.backgroundColor = "red";
+        setTimeout(() => {
+          btn.textContent = "Add to cart";
+          btn.style.backgroundColor = "";
+        }, 2000);
+        return; 
+      }
+    }
+
     let item = {
       name: name,
       price: price,
       qty: 1,
-      img: img.getAttribute('src')
+      img: img.getAttribute('src'),
+      size: size  
     };
 
     let cart = JSON.parse(localStorage.getItem('cart') || '[]');
-    let found = cart.find(c => c.name === item.name);
+    let found = cart.find(c => c.name === item.name && c.size === item.size);
 
     if (found) {
       found.qty += 1;
@@ -91,6 +109,7 @@ document.querySelectorAll('.add-to-cart').forEach(btn => {
 
     localStorage.setItem('cart', JSON.stringify(cart));
 
+    
     btn.textContent = "Added!";
     btn.style.backgroundColor = "green";
     setTimeout(() => {
@@ -99,3 +118,6 @@ document.querySelectorAll('.add-to-cart').forEach(btn => {
     }, 2000);
   });
 });
+
+ 
+
