@@ -62,7 +62,7 @@ document.addEventListener("DOMContentLoaded", () => {
       emailContainer.appendChild(error);
     } else if (!emailpattern.test(emailInput.value)) {
       let error = document.createElement("p");
-      error.textContent = "Please enter a valid email.";
+      error.textContent = "Please enter  valid email.";
       error.classList.add("error-message");
       emailContainer.appendChild(error);
     } else {
