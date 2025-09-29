@@ -23,86 +23,99 @@
     <link rel="stylesheet" href="style.css" />
   </head>
   <body>
+
+    <!-- Scroll to top button -->
+    <button id="moveup" style="display: none;"><i class="fas fa-arrow-up "></i></button>
+
     <!-- Navigation -->
     <nav class="navbar">
-  <h1 style="font-family: 'Times New Roman', Times, serif">Shopspot</h1>
+      <h1 style="font-family: 'Times New Roman', Times, serif">Shopspot</h1>
 
-  <div class="navlinks">
-    <p><a href="index.html">Home</a></p>
-    <p><a href="Collections.html">Collections</a></p>
-    <p><a href="Extras.html">About Us</a></p>
-    <p><a href="Contact.html">Contact Us</a></p>
-    <p><a href="Cart.html"><i class="fa-solid fa-cart-shopping"></i></a></p>
-  </div>
-  <p class="threedot"><i class="fa-solid fa-bars"></i></p>
-</nav>
+      <div class="navlinks">
+        <p><a href="index.html">Home</a></p>
+        <p><a href="Collections.html">Collections</a></p>
+        <p><a href="Extras.html">About Us</a></p>
+        <p><a href="Contact.html">Contact Us</a></p>
+        <p>
+          <a href="Cart.html"><i class="fa-solid fa-cart-shopping"></i></a>
+        </p>
+      </div>
+      <p class="threedot"><i class="fa-solid fa-bars"></i></p>
+    </nav>
 
-<div class="aside">
-  <span class="closeBtn">&times;</span>
-  <h2>Menu</h2>
-  <p><a href="index.html">Home</a></p>
-  <p><a href="Collections.html">Collections</a></p>
-  <p><a href="Extras.html">About Us</a></p>
-  <p><a href="Contact.html">Contact Us</a></p>
-  <p><a href="Cart.html"><i class="fa-solid fa-cart-shopping"></i> Cart</a></p>
-</div>
+    <div class="aside">
+      <span class="closeBtn">&times;</span>
+      <h2>Menu</h2>
+      <p><a href="index.html">Home</a></p>
+      <p><a href="Collections.html">Collections</a></p>
+      <p><a href="Extras.html">About Us</a></p>
+      <p><a href="Contact.html">Contact Us</a></p>
+      <p>
+        <a href="Cart.html"><i class="fa-solid fa-cart-shopping"></i> Cart</a>
+      </p>
+    </div>
 
     <!-- <div class="aside">
        <h2>Welcome to Shopspot</h2>
       <p>Your one-stop shop for fashion, lifestyle, and tech essentials.</p> 
     </div> -->
 
-    
     <!-- Image Slider -->
     <div class="slider">
       <div class="slides" id="slides">
         <div
-  class="slide"
-  style="background: linear-gradient(90deg, #2193b0 0%, #6dd5ed 100%)">
-  <div class="caption">
-    <h2>Style That Commands</h2>
-<p>Discover looks built for confidence and comfort.</p>
+          class="slide"
+          style="background: linear-gradient(90deg, #2193b0 0%, #6dd5ed 100%)"
+        >
+          <div class="caption">
+            <h2>Style That Commands</h2>
+            <p>Discover looks built for confidence and comfort.</p>
 
-    <a href="Collections.html" class="shop" style="@media(max-width:450){font-size:10px}">Shop Now</a>
-  </div>
-  <img
-    id="home-image"
-    src="remove background.png"
-    alt="image #1"/>
-</div>
+            <a
+              href="Collections.html"
+              class="shop"
+              style="@media (max-width: 450) {font-size: 10px}"
+              >Shop Now</a
+            >
+          </div>
+          <img id="home-image" src="remove background.png" alt="image #1" />
+        </div>
         <div
           class="slide"
           style="background: linear-gradient(90deg, #434343 0%, #bdbdbd 100%)"
         >
-        <div class="caption">
-    <h2>Power Meets Precision</h2>
-<p>Upgrade your home with reliable performance.</p>
+          <div class="caption">
+            <h2>Power Meets Precision</h2>
+            <p>Upgrade your home with reliable performance.</p>
 
-
-    <a href="Collections.html" class="shop">Shop Now</a>
-  </div>
+            <a href="Collections.html" class="shop">Shop Now</a>
+          </div>
           <img src="appliance.png" alt="image #2" />
         </div>
         <div
           class="slide"
           style="background: linear-gradient(90deg, #ff5858 0%, #f09819 100%)"
         >
-        <div class="caption">
-    <h2>Elegance, Redefined</h2>
-    <p>Step into style with our latest fashion picks.</p>
-    <a href="Collections.html" class="shop">Shop Now</a>
-  </div>
-          <img src="shoppingwoman.png" alt="image #3" id="shoppingwoman-image"/>
+          <div class="caption">
+            <h2>Elegance, Redefined</h2>
+            <p>Step into style with our latest fashion picks.</p>
+            <a href="Collections.html" class="shop">Shop Now</a>
+          </div>
+          <img
+            src="shoppingwoman.png"
+            alt="image #3"
+            id="shoppingwoman-image"
+          />
         </div>
         <div
           class="slide"
           style="background: linear-gradient(90deg, #f9d423 0%, #fffc00 100%)"
         >
-        <div class="caption">
-    <h2>Innovate Your Everyday</h2>
-<p>Explore smart tech that fits your lifestyle.</p>
-<!-- style="width: 600px; height: 515px;" -->
-          <!-- style="
+          <div class="caption">
+            <h2>Innovate Your Everyday</h2>
+            <p>Explore smart tech that fits your lifestyle.</p>
+            <!-- style="width: 600px; height: 515px;" -->
+            <!-- style="
                       height: 400px;
                       position: relative;
                       bottom: 20px;
@@ -110,13 +123,9 @@
                     "
                     -->
 
-    <a href="Collections.html" class="shop">Shop Now</a>
-  </div>
-          <img
-            src="gadget.png"
-            alt="image #4"
-            id="gadget-image"
-          />
+            <a href="Collections.html" class="shop">Shop Now</a>
+          </div>
+          <img src="gadget.png" alt="image #4" id="gadget-image" />
         </div>
       </div>
 
@@ -134,61 +143,65 @@
 
     <div class="collections">
       <div class="container1">
-        <img
-          src="modelingwoman1.png"
-          alt="image"
-          
-            
-        />
-        <h3 style="color: whitesmoke; position: relative; bottom: 40px;@media(max-width:500){font-size: 50px;}">
+        <img src="modelingwoman1.png" alt="image" />
+        <h3
+          style="
+            color: whitesmoke;
+            position: relative;
+            bottom: 40px;
+            @media (max-width: 500) {
+              font-size: 50px;
+            }
+          "
+        >
           This is the hub of dresses for elegent & exquisite woman
         </h3>
-        <a href="Collections.html"><button class="explore-button" style="position: relative; bottom: 40px">
-          Explore more
-        </button></a>
+        <a href="Collections.html"
+          ><button
+            class="explore-button"
+            style="position: relative; bottom: 40px"
+          >
+            Explore more
+          </button></a
+        >
       </div>
       <div class="container2">
-        <img
-          src="appliance1.png"
-          alt="image1"
-      
-        />
+        <img src="appliance1.png" alt="image1" />
         <div class="text-box">
           <h2 style="color: black; position: relative; left: 20px">
             Powering comfort & style <br />in every corner of your room
           </h2>
-          <a href="Collections.html"><button class="explore-button1"> Explore more</button></a>
+          <a href="Collections.html"
+            ><button class="explore-button1">Explore more</button></a
+          >
         </div>
       </div>
       <div class="container3">
-        <img
-          src="gadget1.png"
-          alt="image2"
-          
-        />
-        <h3 style="color: black; position: relative; bottom: 30px;">
-        <!-- <style>
+        <img src="gadget1.png" alt="image2" />
+        <h3 style="color: black; position: relative; bottom: 30px">
+          <!-- <style>
 
           @media(max-width:500){
             .container3 h3{
             font-size: 30px;}
           }
         </style> -->
-        
+
           Smart gadgets for smarter living bringing tech closer to you
         </h3>
-        <a href="Collections.html"><button class="explore-button2"> Explore more</button></a>
+        <a href="Collections.html"
+          ><button class="explore-button2">Explore more</button></a
+        >
       </div>
       <div class="container4">
-        <img
-          src="modelingman1.jpg"
-          alt="image3"
-                />
+        <img src="modelingman1.jpg" alt="image3" />
         <div class="text-box1">
           <h1 style="color: white">
             This is the hub where confidence meets fashion crafted for every man
           </h1>
-          <a href="Collections.html"><button class="explore-button3"> Explore more</button></a>
+          <a href="Collections.html"
+            ><button class="explore-button3">Explore more</button></a
+          >
         </div>
       </div>
     </div>
@@ -224,23 +237,25 @@
 
     <!-- community section -->
     <div class="community">
-  <h1>Join our community and stay connected!</h1>
-  <p>Follow us on social media for the latest updates, promotions, and more.</p>
-  <form action="#" class="join">
-    <div class="input-group">
-      <div class="email-container">
-        <input
-          class="email-input"
-          type="email"
-          placeholder="Enter your email"
-        />
-        
-      </div>
-      <button class="submit-button"><i class="fas fa-paper-plane" ></i></button>
+      <h1>Join our community and stay connected!</h1>
+      <p>
+        Follow us on social media for the latest updates, promotions, and more.
+      </p>
+      <form action="#" class="join">
+        <div class="input-group">
+          <div class="email-container">
+            <input
+              class="email-input"
+              type="email"
+              placeholder="Enter your email"
+            />
+          </div>
+          <button class="submit-button">
+            <i class="fas fa-paper-plane"></i>
+          </button>
+        </div>
+      </form>
     </div>
-  </form>
-  
-</div>
 
     <!-- footer -->
     <footer class="footer-content">
@@ -320,5 +335,7 @@
     </footer>
 
     <script src="script.js"></script>
-  </body>
+    <script src="search.js"></script>
+
+     </body>
 </html>

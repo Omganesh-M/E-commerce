@@ -1,3 +1,19 @@
+var moveup = document.getElementById("moveup");
+
+      moveup.addEventListener("click", function () {
+        window.scrollTo({
+          top: 0
+        });
+      });
+
+      window.addEventListener("scroll", function () {
+        if (window.scrollY === 0) {
+          moveup.style.display = "none";
+        } else {
+          moveup.style.display = "flex";
+        }
+      });
+
 let boxes = Array.from(document.getElementsByClassName("box"));
 let search = document.getElementById("searchInput");
 let container = document.querySelector(".collection-of-items");
