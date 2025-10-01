@@ -358,21 +358,16 @@ body {
   }
 
 
-#home-image{
-    position: relative;
-    top: 70px;
-  }
+  /* #home-image{
+    /* position: relative;
+    top: 70px; 
+  } */
 
   #gadget-image{
-    height: 250px;
+    height: 150px;
     width: 200px;
   }
 
-  #shoppingwoman-image {
-
-    position: relative;
-    top: 75px;
-  }
   .slide img {
     width: 60%;
     height: auto;
@@ -382,9 +377,6 @@ body {
     object-fit: contain;
     transition: all 0.3s ease-in-out;
   }
-
-  
-  
 
 .slide .caption h2{
     font-size: 30px;
@@ -397,13 +389,11 @@ body {
   color: #f5f5f5;
 }
 
-
-
 .slide .caption .shop {
   display: inline-block;
   background: #fff;
   color: black;
-  font-size: 10px;
+  font-size: 7px;
   border-radius: 6px;
   font-weight: bold;
   text-decoration: none;
@@ -534,94 +524,6 @@ body {
   width: 400px; height: 550px;
 }
 
-@media (max-width: 800px) {
-  .container1,
-  .container2,
-  .container3,
-  .container4 {
-    flex: 1 1 100%;
-    height: auto;
-    transition: all 0.3s ease-in-out;
-  }
-  .container2,
-  .container4 {
-    flex-direction: column;
-    transition: flex-direction 0.5s;
-    transition: all 0.3s ease-in-out 0.5s;
-  }
-}
-
-
-@media (max-width: 500px) {
-  .collections {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 8px;
-  }
-
-  .collections .container2,
-  .collections .container4 {
-    min-height: 180px; /* reduced from 250px */
-    padding: 6px;       /* optional: reduce internal spacing */
-  }
-
-  .collections .container1,
-  .collections .container3 {
-    min-height: 250px; /* keep original size */
-    margin: 0;
-  }
-
-  .collections img {
-    max-width: 100%;
-    height: auto;
-    display: block;
-    margin: 0 auto;
-    object-fit: contain;
-  }
-
-  .container1 img {
-    position: relative;
-    left: 30px;
-  }
-
-  /* .collections .container1 {
-  margin-right: 0px;
-}*/
-
-.collections .container2 {
-  margin-left: 0px;
-} 
-
-  .collections .container1 h3 {
-    font-size: 22px;
-  }
-
-  .collections .container2 img {
-    height: 160px;
-    position: relative;
-    left: 10px;
-  }
-
-.collections .container3 img {
-  width: 100%;           
-  max-height: 300px;     
-  object-fit: cover;     
-  display: block;
-  margin: 0 auto;
-}
-  .collections .container3 h3 {
-    font-size: 30px;
-    position: relative;
-    top: 70px;
-  }
-
-  .collections .container3 .explore-button2 {
-    position: relative;
-    top: 70px;
-  }
-}
-
-
 .explore-button {
   background: linear-gradient(to right, #9d50bb, #a37ce1);
   font-weight: bold;
@@ -647,7 +549,6 @@ body {
   border-radius: 5px;
   padding: 10px 20px;
   cursor: pointer;
-
   margin-left: 20px;
 }
 
@@ -732,6 +633,100 @@ body {
   text-align: center;
   margin-top: 200px;
   row-gap: 30px;
+}
+
+
+@media (max-width: 800px) {
+  .container1,
+  .container2,
+  .container3,
+  .container4 {
+    flex: 1 1 100%;
+    height: auto;
+    transition: all 0.3s ease-in-out;
+  }
+  .container2,
+  .container4 {
+    flex-direction: column;
+    transition: flex-direction 0.5s;
+    transition: all 0.3s ease-in-out 0.5s;
+  }
+}
+
+
+@media (max-width: 500px) {
+  .collections {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 8px;
+  }
+
+  .collections .container2,
+  .collections .container4 {
+    min-height: 180px; /* reduced from 250px */
+    padding: 6px;       /* optional: reduce internal spacing */
+  }
+
+  .collections .container1,
+  .collections .container3 {
+    min-height: 250px; /* keep original size */
+    margin: 0;
+  }
+
+  .collections img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+    margin: 0 auto;
+    object-fit: contain;
+  }
+
+  .container1 img {
+    position: relative;
+    left: 30px;
+  }
+
+  /* .collections .container1 {
+  margin-right: 0px;
+}*/
+
+.collections .container2 {
+  margin-left: -5px;
+} 
+
+  .collections .container1 h3 {
+    font-size: 22px;
+  }
+
+  .collections .container1 .explore-button1 {
+    font-size: 12px;
+    padding: 5px 10px;
+
+  }
+
+  .collections .container2 img {
+    height: 160px;
+    position: relative;
+    left: 10px;
+  }
+
+.collections .container3 img {
+  width: 100%;           
+  max-height: 300px;     
+  object-fit: cover;     
+  display: block;
+  margin: 0 auto;
+}
+  .collections .container3 h3 {
+    font-size: 30px;
+    position: relative;
+    top: 70px;
+  }
+
+  .collections .container3 .explore-button2 {
+    position: relative;
+    top: 70px;
+  }
 }
 
 .benefit-item {
