@@ -3,6 +3,7 @@
   padding: 0;
   box-sizing: border-box;
   font-family: "Poppins", sans-serif;
+  
 }
 
 html,
@@ -233,6 +234,11 @@ body {
   margin-left: 50%;
   max-width: 100%;
   object-fit: contain;
+}
+
+#shoppingwoman-image {
+  position: relative;
+  bottom: 20px;
 }
 
 .slide img {
@@ -698,10 +704,10 @@ body {
     font-size: 22px;
   }
 
-  .collections .container1 .explore-button1 {
+  .collections .container1 .explore-button {
     font-size: 12px;
-    padding: 5px 10px;
-
+    padding: 8px 12px;
+    margin-top: 5px;
   }
 
   .collections .container2 img {
