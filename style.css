@@ -479,10 +479,10 @@ body {
 
 .container1 img{
   width: 320px;
-            height: 400px;
-            position: relative;
-            left: 50px;
-            bottom: 20px;
+  height: 400px;
+  position: relative;
+  left: 50px;
+  bottom: 20px;
           
 }
 
@@ -698,6 +698,7 @@ body {
 
 .collections .container2 {
   margin-left: -5px;
+  width: 170PX;
 } 
 
   .collections .container1 h3 {
